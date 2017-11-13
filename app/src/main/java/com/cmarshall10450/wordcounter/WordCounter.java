@@ -1,7 +1,10 @@
 package com.cmarshall10450.wordcounter;
 
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 
 public class WordCounter {
 
@@ -24,6 +27,23 @@ public class WordCounter {
     }
 
     return wordOccurrences;
+  }
+
+  public static ArrayList<WordOccurrence> getOrderedWordOccurrences(String text) {
+    HashMap<String, Integer> wordOccurrences = getWordOccurences(text);
+    ArrayList<WordOccurrence> orderedWordOccurrences = new ArrayList<>();
+
+    for (Map.Entry<String, Integer> wordOccurrence : wordOccurrences.entrySet()) {
+      WordOccurrence word = new WordOccurrence(
+        wordOccurrence.getKey(),
+        wordOccurrence.getValue()
+      );
+
+      orderedWordOccurrences.add(word);
+    }
+
+    Collections.sort(orderedWordOccurrences, Collections.reverseOrder());
+    return orderedWordOccurrences;
   }
 
 }

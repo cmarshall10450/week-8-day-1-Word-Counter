@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     textInput = findViewById(R.id.text_input);
   }
 
-  public void onWordCountButtonClick(View view) {
+  public void onWordCountButtonClick(View button) {
     String textToCount = textInput.getText().toString();
     int wordCount = WordCounter.countWords(textToCount);
 

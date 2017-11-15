@@ -22,7 +22,7 @@ public class WordCounterTest {
     words.put("it", 3);
     words.put("was", 3);
 
-    assertEquals(words.entrySet(), WordCounter.getWordOccurences(text).entrySet());
+    assertEquals(words.entrySet(), WordCounter.getWordOccurrences(text).entrySet());
   }
 
   @Test

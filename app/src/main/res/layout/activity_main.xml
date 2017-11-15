@@ -5,14 +5,16 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@color/colorBg"
   tools:context="com.cmarshall10450.wordcounter.MainActivity">
 
   <TextView
     android:id="@+id/word_count"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/word_count"
+    android:text="@string/enter_text"
     android:textAppearance="@android:style/TextAppearance.Material.Large"
+    android:textColor="@android:color/background_light"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
@@ -31,6 +33,7 @@
     android:ems="10"
     android:hint="@string/text_input"
     android:inputType="textMultiLine"
+    android:textColor="@android:color/background_light"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.503"
@@ -53,6 +56,21 @@
     app:layout_constraintHorizontal_bias="0.502"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/text_input"
-    app:layout_constraintVertical_bias="0.644"/>
+    app:layout_constraintVertical_bias="0.355"/>
+
+  <Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:onClick="onOrderedWordOccurrencesButtonClick"
+    android:text="@string/ordered_words_btn"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/count_words_button"/>
 
 </android.support.constraint.ConstraintLayout>
